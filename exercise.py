@@ -16,16 +16,12 @@ def check_letter():
     # Your control flow logic goes here
     letter = input("Enter a single letter (a-z or A-Z): ").lower()
     
-    # Check if the input is valid (only one alphabetical character)
     if len(letter) == 1 and letter.isalpha():
-        # Check if the letter is a vowel
         if letter in 'aeiou':
             print(f"The letter {letter} is a vowel.")
         else:
-            # Otherwise, it's a consonant
             print(f"The letter {letter} is a consonant.")
     else:
-        # Handle invalid entries
         print("Invalid input. Please enter a single alphabetical letter.")
 
 
@@ -36,22 +32,16 @@ check_letter()
 # Exercise 2: Old enough to vote?
 
 def check_voting_eligibility():
-    # Prompt the user to input their age
     try:
         age = int(input("Please enter your age: "))
     except ValueError:
         print("Invalid input. Please enter a valid age.")
         return
-
-    # Validate the input to ensure the age is a possible value
     if age < 0:
         print("Age cannot be negative.")
         return
-
-    # Set the minimum voting age
     voting_age = 18
 
-    # Determine if the user is eligible to vote
     if age >= voting_age:
         print("You are eligible to vote.")
     else:
@@ -71,7 +61,6 @@ def calculate_dog_years():
             print("Please enter a valid age.")
             return
         
-        # Calculate dog years
         if age <= 2:
             dog_years = age * 10
         else:
@@ -117,7 +106,6 @@ weather_advice()
 # Exercise 5: What's the Season?
 
 def determine_season():
-    # List of months with correct abbreviations
     months_of_the_year = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
     month = input('Enter the month of the year (Jan-Dec): ').capitalize() 
@@ -142,7 +130,6 @@ def determine_season():
     else:
         season = 'Fall'
 
-    # Print the result
     print(f'{month} {day:02d} is in {season}.')
 
 # Call the function
